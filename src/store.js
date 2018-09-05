@@ -1,5 +1,7 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 
+import { localRecipesMiddleware } from './features/recipesList/recipesList.actions';
+
 /* eslint-disable no-underscore-dangle */
 /* redux devtools configuration */
 const composeEnhancers = process.env.NODE_ENV === 'development'
@@ -9,7 +11,7 @@ const composeEnhancers = process.env.NODE_ENV === 'development'
 
 const configureStore = (rootReducer) => {
   // TODO: Make a proper middleware for LS saving.
-  const middleware = [];
+  const middleware = [localRecipesMiddleware];
 
   const store = {
     ...createStore(

@@ -1,0 +1,16 @@
+[ignore]
+.*/.cache_yarn/
+.*/build/.*
+
+[include]
+./src/
+
+[untyped]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

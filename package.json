@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.0.2",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.4.0",
+    "flow-bin": "^0.80.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -16,14 +17,16 @@
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "redux-actions": "^2.6.1",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "styled-components": "^3.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint": "eslint -c .eslintrc.js src/"
+    "eslint": "eslint -c .eslintrc.js src/",
+    "flow": "flow"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
