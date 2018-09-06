@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 
-import { localRecipesMiddleware } from './features/recipesList/recipesList.actions';
+import localRecipesMiddleware from './localRecipesMiddleware';
 
 /* eslint-disable no-underscore-dangle */
 /* redux devtools configuration */

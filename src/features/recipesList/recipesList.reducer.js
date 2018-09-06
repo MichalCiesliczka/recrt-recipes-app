@@ -1,9 +1,7 @@
 import { handleActions } from 'redux-actions';
 
-import {
-  updateRecipesList,
-  LOCAL_STORAGE_KEY,
-} from './recipesList.actions';
+import { updateRecipesList } from './recipesList.actions';
+import { LOCAL_STORAGE_KEY } from '../../localRecipesMiddleware';
 
 // ------------------------------------
 // State
