@@ -1,6 +1,6 @@
 // @flow
 import React, { Fragment } from 'react';
-import { Redirect } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -25,7 +25,7 @@ type Props = {
     desc: string,
     divider: string,
     card: string,
-    deleteButton: string,
+    button: string,
   },
 };
 
@@ -47,7 +47,7 @@ const styles = {
   card: {
     width: '50%',
   },
-  deleteButton: {
+  button: {
     marginTop: 30,
   },
 };
@@ -110,11 +110,22 @@ const RecipeDetailsComponent = ({ recipe, deleteRecipe, classes }: Props) => {
                 </RecipeCard>
               </Grid>
             </Grid>
+            <NavLink
+              to={`/recipe/${recipe.id}/edit`}
+            >
+              <Button
+                color="primary"
+                variant="contained"
+                className={classes.button}
+              >
+                Edit this recipe
+              </Button>
+            </NavLink>
             <Button
               color="secondary"
               variant="contained"
               onClick={handleDelete}
-              className={classes.deleteButton}
+              className={classes.button}
             >
               Delete this recipe
             </Button>

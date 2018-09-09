@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { compose } from 'redux';
 import { withRouter } from 'react-router';
 import {
@@ -46,14 +46,22 @@ const validate = (values) => {
   return errors;
 };
 
-const RecipeDetailsComponent = ({
-  saveFunction,
-  handleSubmit,
-  reset,
-  history,
-}: Props) => {
-  const handleFormSubmit = (values) => {
-    const newId = v4();
+class RecipeDetailsComponent extends PureComponent<Props> {
+  componentDidMount() {
+    const { initialValues, initialize } = this.props;
+    if (initialValues) {
+      initialize(initialValues);
+    }
+  }
+
+  handleFormSubmit = (values) => {
+    const {
+      saveFunction,
+      reset,
+      history,
+      initialValues,
+    } = this.props;
+    const newId = initialValues ? initialValues.id : v4();
     const preparedData = {
       ...values,
       id: newId,
@@ -64,44 +72,48 @@ const RecipeDetailsComponent = ({
     history.push(`/recipe/${newId}`);
   };
 
-  return (
-    <form onSubmit={handleSubmit(handleFormSubmit)}>
-      <Field
-        label="Title"
-        name="title"
-        component={InputField}
-        type="text"
-      />
-      <Field
-        label="Description"
-        name="description"
-        multiline
-        component={InputField}
-        type="text"
-      />
-      <FieldArray
-        title="Ingredients"
-        buttonLabel="Add Ingredient"
-        elements={['amount', 'name']}
-        name="ingredients"
-        component={renderArray}
-      />
-      <FieldArray
-        title="Steps"
-        buttonLabel="Add Step"
-        elements={['name']}
-        name="steps"
-        component={renderArray}
-      />
-      <Button
-        type="submit"
-        color="primary"
-      >
-        Save recipe
-      </Button>
-    </form>
-  );
-};
+  render() {
+    const { handleSubmit } = this.props;
+
+    return (
+      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
+        <Field
+          label="Title"
+          name="title"
+          component={InputField}
+          type="text"
+        />
+        <Field
+          label="Description"
+          name="description"
+          multiline
+          component={InputField}
+          type="text"
+        />
+        <FieldArray
+          title="Ingredients"
+          buttonLabel="Add Ingredient"
+          elements={['amount', 'name']}
+          name="ingredients"
+          component={renderArray}
+        />
+        <FieldArray
+          title="Steps"
+          buttonLabel="Add Step"
+          elements={['name']}
+          name="steps"
+          component={renderArray}
+        />
+        <Button
+          type="submit"
+          color="primary"
+        >
+          Save recipe
+        </Button>
+      </form>
+    );
+  }
+}
 
 export default compose(
   withRouter,

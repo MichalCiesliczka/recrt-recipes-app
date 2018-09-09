@@ -37,7 +37,7 @@ const styles = {
   },
 };
 
-const renderIngredients = ({
+const renderArray = ({
   title,
   buttonLabel,
   fields,
@@ -81,6 +81,7 @@ const renderIngredients = ({
           {
             elements.map(element => (
               <Field
+                key={element}
                 name={`${field}.${element}`}
                 component={InputField}
                 label={element}
@@ -93,4 +94,4 @@ const renderIngredients = ({
   </div>
 );
 
-export default withStyles(styles)(renderIngredients);
+export default withStyles(styles)(renderArray);
