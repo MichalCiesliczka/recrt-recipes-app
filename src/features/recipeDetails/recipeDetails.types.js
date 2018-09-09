@@ -4,7 +4,9 @@ export type Ingredient = {
   name: string,
 };
 
-export type Step = string;
+export type Step = {
+  name: string,
+};
 
 export type Recipe = {
   id: string,

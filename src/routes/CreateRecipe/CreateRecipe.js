@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 
-import RecipesListContainer from '../../features/recipesList';
+import CreateRecipeContainer from '../../features/createRecipe';
 
-const RecipesList = () => (
+const CreateRecipe = () => (
   <div>
-    <AppBar position="static">
+    <AppBar position="static" color="default">
       <Toolbar>
         <Typography
           variant="title"
@@ -20,19 +20,17 @@ const RecipesList = () => (
             width: '100%',
           }}
         >
-          Recipes List
+          <IconButton color="inherit">
+            <NavLink to="/">
+              {'<'}
+            </NavLink>
+          </IconButton>
+          Create Recipe
         </Typography>
       </Toolbar>
     </AppBar>
-    <NavLink
-      to="/recipe/new"
-    >
-      <Button>
-        Add Recipe
-      </Button>
-    </NavLink>
-    <RecipesListContainer />
+    <CreateRecipeContainer />
   </div>
 );
 
-export default RecipesList;
+export default CreateRecipe;

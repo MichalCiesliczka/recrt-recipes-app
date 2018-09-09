@@ -98,10 +98,10 @@ const RecipeDetailsComponent = ({ recipe, deleteRecipe, classes }: Props) => {
                     {
                       recipe.steps.map(step => (
                         <ListItem
-                          key={step}
+                          key={step.name}
                         >
                           <ListItemText
-                            primary={step}
+                            primary={step.name}
                           />
                         </ListItem>
                       ))
