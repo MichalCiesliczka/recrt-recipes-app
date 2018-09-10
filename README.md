@@ -1,6 +1,11 @@
 # SD Labs recruitment task
 
 ## How to run and test application
+Before even thinking of anything remember to install all depedencies with
+```
+yarn
+```
+
 ### Run
 To run the app type in your terminal:
 ```
@@ -26,6 +31,8 @@ Middleware with only one action handled by reducer is a way to do not manipulate
 Even if it's not about the design I used [Material-UI](https://material-ui.com/) components to do not make app looks like it's 90s :)
 
 There are some unit tests, runned by Jest, written in enzyme with over 80% of code coverage. Also snapshot tests are written for some components. There is some work to be done to reach close to 100% of coverage but I didn't want to spend overhours for that. I think you can see from those tests that I'm writing testable code and care about tests during development.
+
+To improve your experience I added some example recipes. Have fun!
 
 ## To improve:
 - Write more tests
