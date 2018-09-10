@@ -7,7 +7,7 @@ import { LOCAL_STORAGE_KEY } from '../../localRecipesMiddleware';
 // State
 // ------------------------------------
 export const initialState = {
-  recipesList: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [],
+  recipesList: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]'),
 };
 
 // ------------------------------------

@@ -5,7 +5,11 @@ import Grid from '@material-ui/core/Grid';
 import RecipesTable from './RecipesTable/RecipesTable';
 import type { Recipes } from '../recipesList.types';
 
-const RecipesListComponent = ({ recipes }: { recipes: Recipes }) => (
+type Props = {
+  recipes: Recipes,
+};
+
+const RecipesListComponent = ({ recipes }: Props) => (
   <Grid
     container
     alignItems="center"

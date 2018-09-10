@@ -36,7 +36,7 @@ const styles = {
   },
 };
 
-const RecipesTableRow = ({
+export const RecipesTableRow = ({
   recipe,
   index,
   columns,

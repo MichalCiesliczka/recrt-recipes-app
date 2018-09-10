@@ -7,19 +7,14 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
+import { RecipeCardStyles } from '../recipeDetails.styles';
+
 type Props = {
   title: string,
   classes: {
     title: string,
   },
   children: Node,
-};
-
-const styles = {
-  title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
 };
 
 const RecipeCard = ({ title, children, classes }: Props) => (
@@ -36,4 +31,4 @@ const RecipeCard = ({ title, children, classes }: Props) => (
   </Card>
 );
 
-export default withStyles(styles)(RecipeCard);
+export default withStyles(RecipeCardStyles)(RecipeCard);

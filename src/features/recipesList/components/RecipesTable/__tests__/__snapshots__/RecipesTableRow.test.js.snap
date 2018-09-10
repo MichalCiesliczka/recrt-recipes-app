@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipesTableRow /> should render default status 1`] = `
+<tr
+  className="MuiTableRow-root-1 MuiTableRow-hover-3"
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+    }
+  }
+>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root-6"
+    scope={undefined}
+  >
+    2
+  </td>
+  <td
+    aria-sort={null}
+    big={undefined}
+    className="MuiTableCell-root-6 test class "
+    scope={undefined}
+  >
+    Test Title
+  </td>
+  <td
+    aria-sort={null}
+    big="true"
+    className="MuiTableCell-root-6 test class test big class"
+    scope={undefined}
+  >
+    Test Description
+  </td>
+</tr>
+`;

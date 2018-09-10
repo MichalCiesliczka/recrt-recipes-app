@@ -1,9 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import { compose } from 'redux';
-import { withRouter } from 'react-router';
 import {
-  reduxForm,
   Field,
   FieldArray,
 } from 'redux-form';
@@ -24,7 +21,7 @@ type Props = {
   },
 } & FormProps;
 
-const validate = (values) => {
+export const validate = (values) => {
   const errors = {};
 
   if (!values.title) {
@@ -46,7 +43,7 @@ const validate = (values) => {
   return errors;
 };
 
-class RecipeDetailsComponent extends PureComponent<Props> {
+class RecipeForm extends PureComponent<Props> {
   componentDidMount() {
     const { initialValues, initialize } = this.props;
     if (initialValues) {
@@ -115,10 +112,4 @@ class RecipeDetailsComponent extends PureComponent<Props> {
   }
 }
 
-export default compose(
-  withRouter,
-  reduxForm({
-    form: 'recipe-form',
-    validate,
-  }),
-)(RecipeDetailsComponent);
+export default RecipeForm;

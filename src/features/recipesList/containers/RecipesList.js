@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 
-import {
-  getRecipesList,
-} from '../recipesList.selectors';
+import { getRecipesList } from '../recipesList.selectors';
 
 import RecipesListComponent from '../components/RecipesList';
 

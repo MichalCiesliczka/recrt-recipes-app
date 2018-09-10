@@ -1,7 +1,7 @@
 import Loadable from 'react-loadable';
 
 const LoadableComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "transactionList" */ './RecipesList'),
+  loader: () => import(/* webpackChunkName: "recipesList" */ './RecipesList'),
   loading: () => null,
 });
 

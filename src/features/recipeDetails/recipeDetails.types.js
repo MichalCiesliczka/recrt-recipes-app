@@ -1,6 +1,6 @@
 // @flow
 export type Ingredient = {
-  amount: number,
+  amount: number | string,
   name: string,
 };
 

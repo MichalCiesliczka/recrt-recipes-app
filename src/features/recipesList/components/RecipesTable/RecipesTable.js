@@ -6,12 +6,16 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 
 import RecipesTableHeader from './elements/RecipesTableHeader';
-import RecipesTableRow from './elements/RecipesTableRow';
+import RecipesTableRowContainer from './elements/RecipesTableRow';
 
 import type { Recipes } from '../../recipesList.types';
 import { availableColumns } from '../../recipesList.constans';
 
-const RecipesTable = ({ recipes }: { recipes: Recipes }) => (
+type Props = {
+  recipes: Recipes,
+};
+
+const RecipesTable = ({ recipes }: Props) => (
   <Table>
     <TableHead>
       <RecipesTableHeader columns={availableColumns} />
@@ -19,7 +23,7 @@ const RecipesTable = ({ recipes }: { recipes: Recipes }) => (
     <TableBody>
       {recipes
         .map((recipe, index) => (
-          <RecipesTableRow
+          <RecipesTableRowContainer
             key={recipe.id}
             recipe={recipe}
             index={index}

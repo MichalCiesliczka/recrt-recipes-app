@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipesTable /> should render default status 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <thead
+    className="MuiTableHead-root-2"
+  >
+    <tr
+      className="MuiTableRow-root-3 MuiTableRow-head-6"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        No.
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Title
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-16"
+  >
+    <tr
+      className="MuiTableRow-root-3 MuiTableRow-hover-5"
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        1
+      </td>
+      <td
+        aria-sort={null}
+        big={undefined}
+        className="MuiTableCell-root-8 MuiTableCell-body-10 Component-column-17 "
+        scope={undefined}
+      >
+        Test Title
+      </td>
+      <td
+        aria-sort={null}
+        big="true"
+        className="MuiTableCell-root-8 MuiTableCell-body-10 Component-column-17 Component-column--big-18"
+        scope={undefined}
+      >
+        Test Description
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

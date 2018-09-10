@@ -10,15 +10,11 @@ const saveRecipesToLS = (list) => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(list));
   } catch (error) {
     // TODO: Handle this error more gentle.
-    console.error(error);
+    console.error(`Your browser cannot handle local storage, exited with error: ${error}`);
   }
 };
 
 const localRecipesMiddleware = store => next => (action) => {
-  if (action.type === RECIPES_LIST_UPDATE_LIST) {
-    saveRecipesToLS(action.payload);
-  }
-
   if (action.type === CREATE_RECIPE_CREATE) {
     const { recipesList } = store.getState().recipes;
 

@@ -2,7 +2,7 @@ import { withRouter } from 'react-router';
 import Loadable from 'react-loadable';
 
 const LoadableComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "transactionList" */ './EditRecipe'),
+  loader: () => import(/* webpackChunkName: "editRecipe" */ './EditRecipe'),
   loading: () => null,
 });
 

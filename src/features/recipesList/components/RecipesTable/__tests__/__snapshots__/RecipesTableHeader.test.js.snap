@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipesTableHeader /> should render default status 1`] = `
+<tr
+  className="MuiTableRow-root-1"
+>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root-6"
+    scope={undefined}
+  >
+    No.
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root-6"
+    scope={undefined}
+  >
+    Test label
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root-6"
+    scope={undefined}
+  >
+    Test label 2
+  </td>
+</tr>
+`;
