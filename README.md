@@ -1,4 +1,4 @@
-# SD Labs recruitment task
+# Recipes app recruitment task
 
 ## How to run and test application
 Before even thinking of anything remember to install all depedencies with
